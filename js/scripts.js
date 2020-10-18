@@ -2,20 +2,25 @@
     $(document).ready(function() {
         "use strict";
 
+        //rellax #2:start
+        var rellax = new Rellax(".rellax", {
+          center: true,
+        });
+        //rellax #2:end
 
         // PAGE HEADER FADE
         var divs = $('.page-header .video-bg');
         $(window).on('scroll', function() {
-            var st = $(this).scrollTop();
-            divs.css({
-                'opacity': (1 - st / 700)
-            });
-            divs.css({
-                'transition-delay': ("0s")
-            });
-            divs.css({
-                'transition': ("0.05s ease-in-out")
-            });
+          var st = $(this).scrollTop();
+          divs.css({
+            'opacity': (1 - st / 700)
+          });
+          divs.css({
+            'transition-delay': ("0s")
+          });
+          divs.css({
+            'transition': ("0.05s ease-in-out")
+          });
         });
 
 
@@ -26,23 +31,23 @@
 
         // HAMBURGER MENU
         $('.hamburger-menu').on('click', function(e) {
-            if ($(".menu-navigation").hasClass("active")) {
-                $("body").toggleClass("overflow");
-                $(".menu-container").toggleClass("active");
-                $(".menu-navigation").removeClass("active");
-                $(".menu-container").css("transition-delay", "0s");
-                $(".menu-navigation .layers").css("transition-delay", "1s");
-                $(".navigation-menu .bg-layers span").css("transition-delay", "0.3s");
-            } else {
-                $("body").toggleClass("overflow");
-                $(".menu-navigation").toggleClass("active");
-                $(".menu-container").toggleClass("active");
-                $(".menu-container").css("transition-delay", "1s");
-                $(".menu-navigation .layers").css("transition-delay", "0s");
-                $(".navigation-menu.active .inner blockquote").css("transition-delay", "10s");
-                $(".navigation-menu .bg-layers span").css("transition-delay", "0s");
-            }
-            $(this).toggleClass("active");
+          if ($(".menu-navigation").hasClass("active")) {
+            $("body").toggleClass("overflow");
+            $(".menu-container").toggleClass("active");
+            $(".menu-navigation").removeClass("active");
+            $(".menu-container").css("transition-delay", "0s");
+            $(".menu-navigation .layers").css("transition-delay", "1s");
+            $(".navigation-menu .bg-layers span").css("transition-delay", "0.3s");
+          } else {
+            $("body").toggleClass("overflow");
+            $(".menu-navigation").toggleClass("active");
+            $(".menu-container").toggleClass("active");
+            $(".menu-container").css("transition-delay", "1s");
+            $(".menu-navigation .layers").css("transition-delay", "0s");
+            $(".navigation-menu.active .inner blockquote").css("transition-delay", "10s");
+            $(".navigation-menu .bg-layers span").css("transition-delay", "0s");
+          }
+          $(this).toggleClass("active");
         });
 
 
