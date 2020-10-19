@@ -2,11 +2,6 @@
     $(document).ready(function() {
         "use strict";
 
-        //rellax #2:start
-        var rellax = new Rellax(".rellax", {
-          center: true,
-        });
-        //rellax #2:end
 
         // PAGE HEADER FADE
         var divs = $('.page-header .video-bg');
@@ -292,7 +287,8 @@
 					}, 1300);
 
 				}
-			}
+            }
+
 		});
 
 
